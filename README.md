@@ -24,4 +24,4 @@ Todo
 - [ ] allow user to copy to clipboard
 - [ ] binary viewer
 - [ ] add relative time to timestamp decoders
-- [ ] add decoder for css colora
+- [ ] add decoder for css colors
