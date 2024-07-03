@@ -17,3 +17,5 @@ Todo
 - [ ] allow user to write their own decoders
 - [ ] import react and improve UI
 - [ ] decode images
+- [ ] publish to chrome extension store
+- [ ] better icon
