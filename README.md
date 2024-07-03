@@ -19,3 +19,4 @@ Todo
 - [ ] decode images
 - [ ] publish to chrome extension store
 - [ ] better icon
+- [ ] allow user to select decoders
