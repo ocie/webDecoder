@@ -1,0 +1,10 @@
+#decoder-base
+{
+    margin-bottom: 1px;
+    margin-left : 1px;
+    width: 800px;
+    height: 200px;
+    position: fixed;
+    bottom: 0;
+    z-index: 999999;
+}

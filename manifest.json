@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Decoder",
+  "description": "Base Level Extension",
+  "version": "1.0",
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": "images/icon-128.png"
+  },
+  "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content-script.js"],
+        "css": ["content-script.css"],
+        "run_at": "document_end"
+      }
+  ],
+  "permissions": [
+    "contextMenus"
+  ],
+  "icons": {
+    "128": "images/icon-128.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}
