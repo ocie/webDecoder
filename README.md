@@ -23,4 +23,5 @@ Todo
 - [ ] unit testing
 - [ ] allow user to copy to clipboard
 - [ ] binary viewer
-- [ ] add relative time to timestamp decoders 
+- [ ] add relative time to timestamp decoders
+- [ ] add decoder for css colora
