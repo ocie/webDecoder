@@ -1,0 +1,19 @@
+{
+  "name": "webdecoder",
+  "version": "1.0.0",
+  "description": "a Chrome extension to help you decode text on the screen.",
+  "main": "''",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ocie/webDecoder.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ocie/webDecoder/issues"
+  },
+  "homepage": "https://github.com/ocie/webDecoder#readme"
+}
