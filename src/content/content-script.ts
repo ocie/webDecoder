@@ -5,7 +5,7 @@ document.body.appendChild(dialog);
 
 
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
-    newChildren=[];
+    const newChildren=[];
 
     const close = document.createElement('button');
     close.onclick = (e) => {e.preventDefault(); dialog.close();}
@@ -17,7 +17,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
     const selection = request.text.substring(0,64);
     const elipsis = request.text.length > maxLength;
     p.innerText = 'You selected ' + request.text.substring(0,64) + (elipsis?'...':'');
-    for (decoding of request.decodings) {
+    for (const decoding of request.decodings) {
         const sub = document.createElement('p');
         newChildren.push(sub);
         sub.innerText = `${decoding.name}: ${decoding.text}`;

@@ -2,18 +2,24 @@ const path = require('path');
 const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
+  mode: 'development',
+  devtool: "inline-source-map",
   entry: {
-    background: {
-      import: './src/background/background.js',
-      filename: 'background.js'
-    },
-    content: {
-      import: './src/content/content-script.js',
-      filename: 'content-script.js'
-    }
+    'background': path.resolve(__dirname, './src/background/background.ts'),
+    'content-script' : path.resolve(__dirname, './src/content/content-script.ts')
   },
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, './dist'),
+    filename: '[name].js'
+  },
+  module: {
+    rules: [
+      {
+        test: /\.tsx?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/,
+      },
+    ],
   },
   plugins: [
     new CopyPlugin({
