@@ -10,7 +10,7 @@ The contents of the repo are currently the plugin,  You can deploy it locally by
 Todo
 ---
 - [ ] scroll bars for results
-- [ ] build from typescript sources
+- [X] build from typescript sources
 - [ ] display text to be decoded in the context menu instead of popup
 - [ ] place popup so it doesn't cover the cursor
 - [ ] allow user to select placement of popup
