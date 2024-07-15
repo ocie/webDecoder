@@ -16,7 +16,7 @@ Todo
 - [ ] scroll bars for results
 - [ ] types for text decoder/binary decoder
 - [X] build from typescript sources
-- [ ] display text to be decoded in the context menu as well as popup
+- [X] display text to be decoded in the context menu as well as popup
 - [ ] place popup so it doesn't cover the cursor
 - [ ] allow user to select placement of popup
 - [ ] allow user to write their own decoders
