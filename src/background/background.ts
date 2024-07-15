@@ -1,5 +1,5 @@
-import { TextDecoder, Decoding } from "../common/types";
-import { textDecoders } from "../decoders";
+import { TextDecoder, Decoding } from '../common/types';
+import { textDecoders } from '../decoders';
 
 chrome.contextMenus.onClicked.addListener(async function(info) {
     if (info.menuItemId === 'decode') {
@@ -11,7 +11,7 @@ chrome.contextMenus.onClicked.addListener(async function(info) {
                                           
 chrome.runtime.onInstalled.addListener(function() {
   chrome.contextMenus.create({
-      title: 'decode', 
+      title: 'decode %s', 
       contexts: ['selection'], 
       id: 'decode'});
 });
@@ -27,9 +27,7 @@ const getDecodings: TextDecoder = async (inputText:string) =>  {
         } catch (e) {
             // nop, just skip this decoding
         }
-    }
-    console.log(rv);
-        
+    }        
     return rv.sort((x,y)=>Math.min(1000,y.score)-Math.min(1000,x.score));
 }
 
