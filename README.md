@@ -5,7 +5,11 @@ This is a chrome extension that decodes the text selected by the user.  Each dec
 
 To use the extension, simply right click on any text on a page and choose the "decode" option from the context menu.
 
-The contents of the repo are currently the plugin,  You can deploy it locally by downloading the files and using the "load unpacked".
+building
+---
+
+npm ci
+npm run build
 
 Todo
 ---
