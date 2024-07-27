@@ -13,7 +13,7 @@ npm run build
 
 Todo
 ---
-- [ ] scroll bars for results
+- [X] scroll bars for results
 - [ ] types for text decoder/binary decoder
 - [X] build from typescript sources
 - [X] display text to be decoded in the context menu as well as popup
