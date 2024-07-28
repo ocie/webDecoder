@@ -4,7 +4,7 @@ import { textDecoders } from '../decoders';
 chrome.contextMenus.onClicked.addListener(async function(info) {
     if (info.menuItemId === 'decode') {
         const [tab] = await chrome.tabs.query({active: true, lastFocusedWindow: true});
-        const decodings = await getDecodings(info.selectionText);
+        const decodings = (await getDecodings(info.selectionText)).map(x=>x.serialize());
         await chrome.tabs.sendMessage(tab.id, {text: info.selectionText.toString(), decodings});
     }
 });
@@ -16,7 +16,7 @@ chrome.runtime.onInstalled.addListener(function() {
       id: 'decode'});
 });
 
-const getDecodings: TextDecoder = async (inputText:string) =>  {
+const getDecodings = async (inputText:string):Promise<Decoding[]> =>  {
     let rv:Decoding[] = [];
     for (const decoder of textDecoders) {
         try {
@@ -28,6 +28,6 @@ const getDecodings: TextDecoder = async (inputText:string) =>  {
             // nop, just skip this decoding
         }
     }        
-    return rv.sort((x,y)=>Math.min(1000,y.score)-Math.min(1000,x.score));
+    return rv.sort((x,y)=>Math.min(1000,y.getScore())-Math.min(1000,x.getScore()));
 }
 

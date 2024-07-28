@@ -1,3 +1,5 @@
+import { Decoding } from "../common/types";
+
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
     const dialog = document.createElement('dialog');
     dialog.className = 'decoder-base';
@@ -23,10 +25,16 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
     header.appendChild(p);
 
     const newChildren=[];
-    for (const decoding of request.decodings) {
-        const sub = document.createElement('p');
-        newChildren.push(sub);
-        sub.innerText = `${decoding.name}: ${decoding.text}`;
+    for (const decodingSer of request.decodings) {
+        const decoding = Decoding.deserialize(decodingSer);
+        const item = document.createElement('div');
+        item.className = 'decoder-item';
+        const name = document.createElement('p')
+        name.innerText = decoding.getName();
+        item.appendChild(name);
+
+        item.appendChild(decoding.render());
+        newChildren.push(item);
     }
     body.replaceChildren(...newChildren);
     dialog.show();
