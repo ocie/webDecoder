@@ -13,6 +13,8 @@ npm run build
 
 Todo
 ---
+- [X] evaluate matches in content-script
+- [ ] close dialog when decoding a new item
 - [X] scroll bars for results
 - [ ] types for text decoder/binary decoder
 - [X] build from typescript sources
@@ -29,4 +31,4 @@ Todo
 - [ ] allow user to copy to clipboard
 - [ ] binary viewer
 - [ ] add relative time to timestamp decoders
-- [/] add decoder for css colors
+- [X] add decoder for css colors

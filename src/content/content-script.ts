@@ -1,6 +1,25 @@
-import { Decoding } from "../common/types";
+import { Decoding } from '../common/types';
+import { textDecoders } from '../decoders';
 
-chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
+const getDecodings = async (inputText:string):Promise<Decoding[]> =>  {
+    let rv:Decoding[] = [];
+    for (const decoder of textDecoders) {
+        try {
+          const result = await decoder(inputText);
+          if (result) {
+              rv=rv.concat(result);
+          }
+        } catch (e) {
+            // nop, just skip this decoding
+        }
+    }        
+    return rv.sort((x,y)=>Math.min(1000,y.getScore())-Math.min(1000,x.getScore()));
+}
+
+chrome.runtime.onMessage.addListener(async function(request, sender, sendResponse) {
+    const {text} = request;
+    const decodings = await getDecodings(text);
+
     const dialog = document.createElement('dialog');
     dialog.className = 'decoder-base';
     document.body.appendChild(dialog);
@@ -25,8 +44,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
     header.appendChild(p);
 
     const newChildren=[];
-    for (const decodingSer of request.decodings) {
-        const decoding = Decoding.deserialize(decodingSer);
+    for (const decoding of decodings) {
         const item = document.createElement('div');
         item.className = 'decoder-item';
         const name = document.createElement('p')
