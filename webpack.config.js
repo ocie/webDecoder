@@ -29,7 +29,8 @@ module.exports = {
       patterns: [
         { from: "./src/popup/popup.html", to: path.resolve(__dirname, 'dist') },
         { from: "**/*", context: path.resolve(__dirname, "src", "assets"), to: path.resolve(__dirname, 'dist') },
-        { from: "./src/content/content-script.css", to: path.resolve(__dirname, 'dist')}
+        { from: "./src/content/content-script.css", to: path.resolve(__dirname, 'dist')},
+        { from: "./src/popup/popup.css", to: path.resolve(__dirname, 'dist')},
       ],
       options: {
         concurrency: 100,

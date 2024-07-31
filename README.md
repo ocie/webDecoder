@@ -13,7 +13,7 @@ npm run build
 
 Todo
 ---
-- [ ] basic instructions in popup
+- [X] basic instructions in popup
 - [X] evaluate matches in content-script
 - [X] close dialog when decoding a new item
 - [X] scroll bars for results

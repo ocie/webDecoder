@@ -1,5 +1,22 @@
 <html>
   <body>
-    <h1>Decoder configuration menu</h1>
+    <link rel="stylesheet" type="text/css" href="popup.css">
+    <h1>Web Decoder</h1>
+    <img src="icon-128.png"/>
+    <p class="instructions">Basic instructions: Right click on some text and select "decode" from the popup menu.
+      Note: If the decoder is not processing enough of the text, for example, with css color functions, it may be
+      necessary to select the text before decoding to ensure the correct text is used.
+      The decoder will show a dialog at the bottom of the screen providing an explanation of the text you selected.
+      You can even use it to decode the examples below.
+      </p>
+      <p>
+      Current decoder capabilities:
+      <ul>
+        <li>base64 encoded text.  SGVsbG8sIERlY29kZXIhCg==, eyJzb21lIjogImpzb24ifQo=</li>
+        <li>css colors.  #FF00AA, rgb(128, 128, 200), aquamarine</li>
+        <li>unix timestamps (seconds or millisecons since epoch).  88930800, 978336000</li>
+        <li>more on the way</li>
+      </ul>
+      </p>
   </body>
 </html>
