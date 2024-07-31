@@ -1,6 +1,6 @@
 {
   "name": "webdecoder",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "description": "a Chrome extension to help you decode text on the screen.",
   "main": "''",
   "scripts": {

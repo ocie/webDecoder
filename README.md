@@ -13,8 +13,9 @@ npm run build
 
 Todo
 ---
+- [ ] basic instructions in popup
 - [X] evaluate matches in content-script
-- [ ] close dialog when decoding a new item
+- [X] close dialog when decoding a new item
 - [X] scroll bars for results
 - [ ] types for text decoder/binary decoder
 - [X] build from typescript sources

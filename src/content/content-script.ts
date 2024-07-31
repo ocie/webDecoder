@@ -16,13 +16,18 @@ const getDecodings = async (inputText:string):Promise<Decoding[]> =>  {
     return rv.sort((x,y)=>Math.min(1000,y.getScore())-Math.min(1000,x.getScore()));
 }
 
-chrome.runtime.onMessage.addListener(async function(request, sender, sendResponse) {
-    const {text} = request;
-    const decodings = await getDecodings(text);
 
+chrome.runtime.onMessage.addListener(async function(request, sender, sendResponse) {
+
+    const oldDialogs = document.querySelectorAll('.decoder-base');
+    oldDialogs.forEach(d => d.remove());
     const dialog = document.createElement('dialog');
     dialog.className = 'decoder-base';
     document.body.appendChild(dialog);
+
+    const {text} = request;
+    const decodings = await getDecodings(text);
+
     
     const header = document.createElement('div');
     header.className = 'decoder-head';
