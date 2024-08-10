@@ -33,3 +33,4 @@ Todo
 - [ ] binary viewer
 - [ ] add relative time to timestamp decoders
 - [X] add decoder for css colors
+- [ ] url decoder
