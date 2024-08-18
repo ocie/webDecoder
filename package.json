@@ -7,6 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
     "clean": "rimraf dist webdecoder*.zip",
+    "version": "tools/updateManifest.js && git add manifest.json",
     "zip": "zip-build dist .",
     "release": "npm run clean && npm run build && npm run zip"
   },
