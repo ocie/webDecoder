@@ -13,6 +13,7 @@ npm run build
 
 Todo
 ---
+- [ ] extension not working on initial install
 - [X] basic instructions in popup
 - [X] evaluate matches in content-script
 - [X] close dialog when decoding a new item
@@ -35,4 +36,4 @@ Todo
 - [X] add decoder for css colors
 - [ ] url decoder
 - [X] dialog form closure
-- [ ] dialog remove zindex
+- [X] dialog remove zindex
