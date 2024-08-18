@@ -34,3 +34,5 @@ Todo
 - [ ] add relative time to timestamp decoders
 - [X] add decoder for css colors
 - [ ] url decoder
+- [X] dialog form closure
+- [ ] dialog remove zindex

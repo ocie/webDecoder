@@ -28,7 +28,6 @@ chrome.runtime.onMessage.addListener(async function(request, sender, sendRespons
     const {text} = request;
     const decodings = await getDecodings(text);
 
-    
     const header = document.createElement('div');
     header.className = 'decoder-head';
     dialog.appendChild(header);
@@ -37,10 +36,12 @@ chrome.runtime.onMessage.addListener(async function(request, sender, sendRespons
     body.className = 'decoder-content';
     dialog.appendChild(body);
 
-    const close = document.createElement('button');
-    close.onclick = (e) => {e.preventDefault(); dialog.close();}
-    close.innerText = '[X]';
-    header.appendChild(close);
+    const closeForm = document.createElement('form');
+    closeForm.method='dialog';
+    const closeButton = document.createElement('button');
+    closeButton.innerText = '[X]';
+    closeForm.appendChild(closeButton);
+    header.appendChild(closeForm);
 
     const maxLength=64;
     const elipsis = request.text.length > maxLength;
