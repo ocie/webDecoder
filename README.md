@@ -15,7 +15,7 @@ Todo
 ---
 - [X] prevent restyling button
 - [ ] extension not working on initial install
-- [ ] automaticlaly sync version number in manifest with package.json/npm version command
+- [X] automaticlaly sync version number in manifest with package.json/npm version command
 - [X] basic instructions in popup
 - [X] evaluate matches in content-script
 - [X] close dialog when decoding a new item
