@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Web Decoder",
   "description": "A helper to decode text encodings such as base64 or UNIX timestamps",
-  "version": "2.4.0",
+  "version": "2.5.0",
   "action": {
     "default_popup": "popup.html",
     "default_icon": "icon-128.png"
