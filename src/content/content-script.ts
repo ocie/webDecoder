@@ -22,7 +22,14 @@ chrome.runtime.onMessage.addListener(async function(request, sender, sendRespons
     const oldDialogs = document.querySelectorAll('.decoder-base');
     oldDialogs.forEach(d => d.remove());
     const dialog = document.createElement('dialog');
+
+    const dialogContents = document.createElement('div');
+    dialogContents.attachShadow({mode: 'open'});
+    if (dialogContents?.shadowRoot) {
+        dialogContents.shadowRoot.innerHTML = '<style>:host {all: initial;}</style>'
+    }
     dialog.className = 'decoder-base';
+    dialog.appendChild(dialogContents);
     document.body.appendChild(dialog);
 
     const {text} = request;
@@ -30,11 +37,11 @@ chrome.runtime.onMessage.addListener(async function(request, sender, sendRespons
 
     const header = document.createElement('div');
     header.className = 'decoder-head';
-    dialog.appendChild(header);
+    dialogContents?.shadowRoot.appendChild(header);
 
     const body = document.createElement('div');
     body.className = 'decoder-content';
-    dialog.appendChild(body);
+    dialogContents?.shadowRoot.appendChild(body);
 
     const closeForm = document.createElement('form');
     closeForm.method='dialog';
