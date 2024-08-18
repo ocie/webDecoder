@@ -61,5 +61,5 @@ chrome.runtime.onMessage.addListener(async function(request, sender, sendRespons
         newChildren.push(item);
     }
     body.replaceChildren(...newChildren);
-    dialog.show();
+    dialog.showModal();
 });
