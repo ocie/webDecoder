@@ -2,18 +2,24 @@
   "manifest_version": 3,
   "name": "Web Decoder",
   "description": "A helper to decode text encodings such as base64 or UNIX timestamps",
-  "version": "2.5.1",
+  "version": "2.5.2",
   "action": {
     "default_popup": "popup.html",
     "default_icon": "icon-128.png"
   },
   "content_scripts": [
-      {
-        "matches": ["<all_urls>"],
-        "js": ["content-script.js"],
-        "css": ["content-script.css"],
-        "run_at": "document_end"
-      }
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content-script.js"
+      ],
+      "css": [
+        "content-script.css"
+      ],
+      "run_at": "document_end"
+    }
   ],
   "permissions": [
     "contextMenus"
