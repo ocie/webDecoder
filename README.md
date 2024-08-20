@@ -17,6 +17,7 @@ Todo
 - [ ] extension not working on initial install
 - [ ] i18n
 - [ ] about info listing libraries, GitHub link
+- [ ] not working on Chrome developer site (iframe issue?) 
 - [X] automaticlaly sync version number in manifest with package.json/npm version command
 - [X] basic instructions in popup
 - [X] evaluate matches in content-script
