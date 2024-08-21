@@ -18,7 +18,7 @@ Todo
 - [ ] i18n
 - [ ] about info listing libraries, GitHub link
 - [ ] not working on Chrome developer site (iframe issue?) 
-- [ ] exclude chrome:// URLs
+- [ ] exclude chrome:// URLs or extensions gallery - doesn't look possible.  The contextMenu API only provides an allow list for which URLs the menu will appear in.  I want it for all URLs except for chrome:// and extensions gallery.
 - [X] automaticlaly sync version number in manifest with package.json/npm version command
 - [X] basic instructions in popup
 - [X] evaluate matches in content-script
