@@ -14,10 +14,11 @@ npm run build
 Todo
 ---
 - [X] prevent restyling button
-- [ ] extension not working on initial install
+- [X] extension not working on initial install
 - [ ] i18n
 - [ ] about info listing libraries, GitHub link
 - [ ] not working on Chrome developer site (iframe issue?) 
+- [ ] exclude chrome:// URLs
 - [X] automaticlaly sync version number in manifest with package.json/npm version command
 - [X] basic instructions in popup
 - [X] evaluate matches in content-script
