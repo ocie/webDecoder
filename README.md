@@ -16,7 +16,7 @@ Todo
 - [X] prevent restyling button
 - [X] extension not working on initial install
 - [ ] i18n
-- [ ] about info listing libraries, GitHub link
+- [X] about info listing libraries, GitHub link
 - [XX] not working on Chrome developer site (iframe issue?) 
 - [XX] exclude chrome:// URLs or extensions gallery - doesn't look possible.  The contextMenu API only provides an allow list for which URLs the menu will appear in.  I want it for all URLs except for chrome:// and extensions gallery.
 - [X] automaticlaly sync version number in manifest with package.json/npm version command
