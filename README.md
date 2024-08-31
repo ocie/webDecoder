@@ -13,6 +13,7 @@ npm run build
 
 Todo
 ---
+- [ ] appears in multiple locations?  Look at "justpaste.it"
 - [X] prevent restyling button
 - [X] extension not working on initial install
 - [ ] i18n
@@ -32,7 +33,7 @@ Todo
 - [ ] allow user to write their own decoders
 - [ ] import react and improve UI
 - [ ] decode images
-- [ ] publish to chrome extension store
+- [X] publish to chrome extension store
 - [ ] better icon
 - [ ] allow user to select decoders
 - [ ] unit testing
@@ -40,6 +41,6 @@ Todo
 - [ ] binary viewer
 - [ ] add relative time to timestamp decoders
 - [X] add decoder for css colors
-- [ ] url decoder
+- [X] uri decoder
 - [X] dialog form closure
 - [X] dialog remove zindex
