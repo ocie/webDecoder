@@ -13,6 +13,7 @@ npm run build
 
 Todo
 ---
+- [ ] support unicode (try decoding 4p2k77iP)
 - [ ] appears in multiple locations?  Look at "justpaste.it"
 - [X] prevent restyling button
 - [X] extension not working on initial install
